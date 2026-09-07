@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to right, #242e45, #29374f, #24303b);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0 35px;
+  color: #d2dce0;
+  text-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+}
+
+p {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: white;
+}
+
+#section1, #section2 {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.div, #div2, #div3 {
+  padding: 20px;
+  margin: 8px;
+  border-radius: 12px;
+  background: linear-gradient(to right, #0f172a, #081225, #001f3f);
+  box-shadow: 0 10px 15px rgba(154, 154, 160, 0.5);
+  animation: float 2s ease-in-out infinite;
+  transition:transform 0.4s ease,
+  box-shadow 0.4s ease;
+}
+
+.div, #div2 {
+  width: 250px;
+  min-height: 180px;
+}
+
+#div3 {
+  width: 520px;
+  min-height: 180px;
+}
+
+.div:hover, #div2:hover, #div3:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 5, 10, 0.4);
+}
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+input {
+  width: 80%;
+  max-width: 400px;
+  height: 35px;
+  display: block;
+  margin: 10px auto 20px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+textarea {
+  width: calc(100% - 50px);
+  max-width: 470px;
+  height: 170px;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  color: white;
+  font-size: 13px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #0f172a, #081225, #001f3f);
+  font-family: Arial, Helvetica, sans-serif;
+  resize: vertical;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  #toggle {
+    gap: 20px;
+  }
+
+  h1 {
+    margin-left: 0;
+    font-size: 28px;
+  }
+
+  #section1, #section2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .div, #div2, #div3 {
+    width: min(100%, 520px);
+    margin: 10px 0;
+  }
+
+  textarea {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .div, #div2, #div3 {
+    width: 100%;
+    min-height: 180px;
+    margin: 8px 0;
+    padding: 15px;
+  }
+
+  input {
+    width: 95%;
+  }
+
+  button {
+    width: 90%;
+    max-width: 250px;
+  }
+
+  textarea {
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+  }
+}
